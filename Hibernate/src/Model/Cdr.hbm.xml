@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/03/2020 09:49:58 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Model.Cdr" table="cdr" catalog="byui_hibernate" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="subscriberId" type="string">
+            <column name="subscriber_id" length="12" not-null="true" />
+        </property>
+        <property name="startTime" type="timestamp">
+            <column name="start_time" length="19" />
+        </property>
+        <property name="finishTime" type="timestamp">
+            <column name="finish_time" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>
